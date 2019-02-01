@@ -1,0 +1,25 @@
+
+<div class="container">
+    <h2>Students Details</h2>
+  
+<table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Qualification</th>
+            <th>Passing Year</th>
+            <th>Select Details</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let stuObj of studentData ; let i = index">
+              <td>{{stuObj.studentName}}</td>
+              <td>{{stuObj.studentQualification}}</td>
+              <td>{{stuObj.passingYear}}</td>
+              <td><button (click)="emitStudentEvent(i)">click</button></td>
+            </tr>        
+          </tbody>
+        </table>
+</div>
+<h1>this is child data {{teja}}</h1>
+<button (click)="onSubmit()">click</button>

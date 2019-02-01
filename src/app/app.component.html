@@ -1,0 +1,161 @@
+<!-- <div> -->
+  <!-- <h1>
+    
+    
+    
+    
+    
+    Welcome!!
+    <h1>{{4+5}}</h1>
+     interpolation 
+  </h1>
+    <p>
+    Name:{{person.sex === 'm'? 'Mr' : 'ms'}}
+    {{person.name.first + ''+person.name.surname}}
+    </p>
+    <div *ngIf="show">Text to show</div> -->
+<!-- <div *ngIf= "!isloggedIn || !isNewUser">
+  please login, friend teja.
+  </div> -->
+  <!-- <div *ngIf="isLoggedIn; else loggedOut">
+    welcome back,friend.
+  </div>
+
+  <ng-template #loggedOut>
+    please friend, login. 
+    </ng-template> -->
+<!-- 
+    <div *ngIf="ok">show this is ok content</div>
+<button (click)=toggle()>toggle</button>  -->
+<!-- <ul>
+  <li *ngFor="let flowerList of listOfFlowers">
+    {{flowerList}}
+  </li>
+  </ul> -->
+  <!-- <h1>{{str}}</h1>
+  <h2 *ngIf="prathusha " >THis Is Text</h2>
+
+  <button (click)=clickMe()>CLICK</button>
+  <h2>{{show}}</h2> -->
+
+<!-- <ul *ngFor="let anu of listOfFlowers">
+  <li>
+   <h1> {{anu}} </h1>
+  </li>
+</ul>
+  </div> -->
+
+  <button (click)=print()>print</button>
+  <p *ngFor="let element of arr" > {{element}}  </p> 
+  
+    <!-- <h2>{{2+3+test()}}</h2>
+    <input type="text" [(ngModel)]='name'>
+    {{name}} -->
+
+    <!-- <h1>{{1+1+getVal()}}</h1> -->
+
+    <!-- <input type="text" [value]="'Magnet'" /> -->
+    <!-- <div>
+      <span *ngIf="isavailable; then condition1 else condition2">condtion</span>
+      <ng-template #condition1>condition is valid</ng-template>
+      <ng-template #condition2>condition is invalid</ng-template>
+    </div> -->
+
+    <!-- <div>
+      Month:
+      <select (change)="changemonths($event.target.value)">
+        <option *ngFor="let monthName of months">{{monthName}}</option>
+      </select>
+    </div>
+    <div>
+      Month:
+      <select #q (change)="changemonths(q.value)">
+        <option *ngFor="let monthName of months">{{monthName}}</option>
+      </select>
+    </div>
+
+    <div [ngSwitch]="color">
+      <div *ngSwitchCase="'red'">you picked red</div>
+      <div *ngSwitchCase="'green'">you picked green</div>
+      <div *ngSwitchCase="'blue'">you picked blue</div>
+      <div *ngSwitchCase="'yellow'">you picked yellow</div>
+      <div *ngSwitchDefault>you picked default</div>
+    </div>
+
+    <button (click)="show =!show">{{show ? 'show' : 'hide'}}</button>
+    show={{show}}
+    <br>
+    <div *ngIf="show">text to show</div>
+
+    <input #box (keyup.enter)="update(box.value)" (blur)="update(box.value)">
+    <p>{{value}}</p> -->
+
+
+<h1>hi</h1>
+
+<!-- <input [(ngModel)]="firstname" id="firstname" placeholder="firstname">
+{{firstname}}
+
+<input [ngModel]="username" (ngModelChange)="username=$event" placeholder="just for test">
+<p>hello! {{username}}!
+</p> -->
+<input [(ngModel)]="name" #ctrl="ngModel" required>
+<p>Value: {{ name }}</p>
+<p>Valid: {{ctrl.valid}}</p>
+
+<button (click)="setValue()">set value</button>
+
+<div>
+  Iterate Object By Key:
+  <ul id="list">
+    <li *ngFor="let keyIter of keyObject">{{keyIter}}</li>
+  </ul>
+</div>
+
+{{person.img_url}}
+<img src={{person.img_url}}/>
+
+
+
+
+
+
+
+
+<hr>
+<app-servers></app-servers>
+
+<pipe-builtins></pipe-builtins>
+<app-child [teja]="message" (myData)="sometext=$event"></app-child>
+<h1>this is parent level </h1>
+{{sometext}}
+<app-child [studentData] = "studentRecord" (sendRecord)=getStudentRecord($event)></app-child>
+selected record:
+
+<td>{{selectDataGot.studentName}}</td>
+<td>{{selectDataGot.studentQualification}}</td>
+<td>{{selectDataGot.passingYear}}</td>
+
+<!--h6>Numbers in array</h6>    
+<div *ngFor="let num of nums">
+  {{num}}
+</div>
+<h6>Even Numbers</h6>    
+<div *ngFor="let num of (nums | even)">
+  {{num}}
+</div-->
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+
+  <div [ngStyle]="{'background-color':'yellow'}">this is just a test content to show background color yellow</div>
+  
+  <div [ngStyle]="{'background-color':person1.country === 'UK' ? '#C0C0C0' : 'red' }">This to highlight on the basis of person contry name</div>
+  
+  <div [ngStyle]="{'font-size.%':250}"> this just test for set size in px or %</div>
+  
+  
+   <p>Passing an Array of classes:</p>
+  <button [ngClass]="['btn', 'btn-dengar']">Button</button>
+  </div>
+  <h2>this is h2 header</h2>
